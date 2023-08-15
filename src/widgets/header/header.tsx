@@ -10,7 +10,7 @@ export const Header = () => {
     <Layout>
       <div className={style.header}>
         <Icon.Logo />
-        <div>
+        <div className={style.header__centerBlock}>
           <p className={style.header__top}>Soon</p>
           <ul className={style.header__nav}>
             <Link to={"/"}>
