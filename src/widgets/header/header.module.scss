@@ -1,0 +1,38 @@
+.header {
+  padding: 46px 0px 8px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header__top{
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+    text-align: center;
+  }
+  
+  .header__nav {
+    display: flex;
+    gap: 8px;
+    list-style-type: none;
+    align-items: center;
+    margin: 0 auto;
+ 
+    a {
+      text-decoration: none;
+    }
+
+    .nav__item {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      color: var(--foreground);
+      padding: 16px 24px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+}
