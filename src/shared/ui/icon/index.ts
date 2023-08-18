@@ -10,3 +10,5 @@ export { ReactComponent as Pattern} from "./pattern.svg";
 export { ReactComponent as Cross} from "./cross.svg";
 export { ReactComponent as Search} from "./search.svg";
 export { ReactComponent as TableHeader} from "./top-bottom.svg";
+export { ReactComponent as ArrowDown} from "./arrow-down.svg";
+

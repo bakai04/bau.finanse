@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
-import { VaultsPage } from "./pages";
+import { VaultsInfoPage, VaultsPage } from "./pages";
 import MainPage from "./pages/main/main-page";
 import "./shared/styles/app.scss"
 import { Footer, Header } from "./widgets";
@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/vaults" element={<VaultsPage />} />
+        <Route path="/vaults-info/:id" element={<VaultsInfoPage />} />
       </Routes>
       <Footer/>
     </>

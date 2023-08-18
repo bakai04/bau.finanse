@@ -1,11 +1,18 @@
 import { Icon } from "../../shared/ui"
 import React from 'react'
-import style from "./main-slider.module.scss";
+import style from "./vaults-info-preview.module.scss";
+import { Link, useNavigate } from "react-router-dom";
 
-export const MainSlider = () => {
+export const VaultsInfoPreview = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(-1)
+  }
+
   return (
     <div className={style.main}>
-      <button className={style.prev_button}>
+      <button className={style.prev_button} onClick={handleClick}>
         <Icon.Arrow className={style.prev_arrow} />
         Back
       </button>
@@ -16,12 +23,12 @@ export const MainSlider = () => {
         </div>
         <Icon.RealisticLogo className={style.logo}/>
         <h2 className={style.content__title}>DYDX-ETH</h2>
-        <a href="https://www.youtube.com/" className={style.content__link}>
+        <Link to="/" className={style.content__link}>
           <span>
             Curve COILFRAX-f
           </span>
           <Icon.ArrowLong />
-        </a>
+        </Link>
       </div>
 
       <div className={style.slide__info}>

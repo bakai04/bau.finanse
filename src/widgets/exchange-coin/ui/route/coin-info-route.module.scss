@@ -1,0 +1,48 @@
+.wrapper {
+  padding: 0px 32px 12px 32px;
+  margin-top: 8px;
+
+  .popover__trigger {
+    padding: 14px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: var(--grey);
+    cursor: pointer;
+
+    .popover__trigger_active {
+      transition: .2s ease-out;
+      transform: rotate(180deg);
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .price {
+    padding: 4px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: var(--grey);
+
+    .warning {
+      color: var(--warning);
+    }
+
+    .coin {
+      span {
+        color: var(--foreground);
+      }
+    }
+  }
+}
