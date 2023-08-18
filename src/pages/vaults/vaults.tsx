@@ -1,28 +1,34 @@
-import { VaultsTable, VaultsFilter } from "../../features"
+import { Layout } from "../../widgets";
 import React from 'react'
-import style from "./main-vaults.module.scss"
-import { Button, Icon } from "../../shared/ui"
-import { useNavigate } from "react-router-dom"
+import style from "./vaults.module.scss";
+import { VaultSearch } from "../../features";
+import { Icon } from "../../shared/ui";
+import { VaultsTable } from "../../features/vaults-table/vaults-table";
 
 const columns = [
   {
     header: "Name",
+    suffix: <Icon.TableHeader/>,
     accessor: "name"
   },
   {
-    header: <span>APY</span>,
+    header: "APY",
+    suffix: <Icon.TableHeader/>,
     accessor: "apy"
   },
   {
-    header: <>APY, <span>7 Days</span></>,
+    header: "APY, 7 Days",
+    suffix: <Icon.TableHeader/>,
     accessor: "apyPerWeek"
   },
   {
     header: "Deposited",
+    suffix: <Icon.TableHeader/>,
     accessor: "deposited"
   },
   {
     header: "TVL",
+    suffix: <Icon.TableHeader/>,
     accessor: "tvl"
   }
 ]
@@ -72,24 +78,14 @@ const data = [
   }, 
 ]
 
-export const MainVaults = () => {
-  const navigate = useNavigate();
-
-  const onClickMore = () => {
-    navigate("/vaults")
-  }
+export const VaultsPage = () => {
   return (
-    <section className={style.main_vaults}>
-      <h2 className={style.main_vaults__title}>
-        Other portocols charge you 
-        <span> 5-30%</span> performance fee
-      </h2>
-      <p className={style.main_vaults__description}>See how fees can impact ROI for yield farmers</p>
-      <div>
-        <VaultsFilter/>
+    <Layout>
+      <section className={style.vaults}>
+        <h2 className={style.vaults__title}>Vaults</h2>
+        <VaultSearch/>
         <VaultsTable columns={columns} data={data}/>
-        <Button onClick={onClickMore} className={style.main_vaults__button} size="large" suffix={<Icon.ArrowLong/>}>More vaults</Button>
-      </div>
-    </section>
+      </section>
+    </Layout>
   )
 }

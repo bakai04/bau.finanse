@@ -41,6 +41,7 @@ export const Button = forwardRef<HTMLButtonElement, IButton>(
           svgOnly && styles.svg_only,
           className
         )}
+        onClick={propsOnClick}
         type={htmlType}
         ref={ref}
         {...restProps}

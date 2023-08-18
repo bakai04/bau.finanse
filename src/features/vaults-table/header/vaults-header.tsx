@@ -1,12 +1,25 @@
 import React from 'react'
+import { IColumn } from "../vaults-table";
 import style from "./vaults-header.module.scss";
 
-export const VaultsHeader = () => {
+interface IProps {
+  columns: IColumn[]
+}
+
+export const VaultsHeader = (props: IProps) => {
   return (
     <thead className={style.wrapper}>
-      <tr className={style.column_title}>
-        <th>Name</th>
-      </tr>
+      {
+        props.columns.map((elem) => (
+          <tr className={style.column_title}>
+            <th>
+              {elem.header}
+              {elem?.suffix}
+            </th>
+          </tr>
+        ))
+      }
+{/* 
       <tr className={style.column_title}>
         <th>APY</th>
       </tr>
@@ -21,7 +34,7 @@ export const VaultsHeader = () => {
       </tr>
       <tr className={style.column_title}>
         <th>Other FEES</th>
-      </tr>
+      </tr> */}
     </thead>
   )
 }

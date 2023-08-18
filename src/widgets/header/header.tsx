@@ -13,7 +13,7 @@ export const Header = () => {
         <div className={style.header__centerBlock}>
           <p className={style.header__top}>Soon</p>
           <ul className={style.header__nav}>
-            <Link to={"/"}>
+            <Link to={"/vaults"}>
               <li className={style.nav__item}>Vaults</li>
             </Link>
             <Link to={"/"}>
