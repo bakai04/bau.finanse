@@ -8,7 +8,7 @@ import HeaderProfile from "../../features/header-profile/header-profile";
 export const Header = () => {
   return (
     <Layout>
-      <div className={style.header}>
+      <header className={style.header}>
         <Icon.Logo />
         <div className={style.header__centerBlock}>
           <p className={style.header__top}>Soon</p>
@@ -28,7 +28,7 @@ export const Header = () => {
           </ul>
         </div>
         <HeaderProfile />
-      </div>
+      </header>
     </Layout>
   )
 }

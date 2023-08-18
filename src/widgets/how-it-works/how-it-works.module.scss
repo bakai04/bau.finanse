@@ -1,0 +1,18 @@
+.wrapper {
+  margin-top: 40px;
+
+  .title {
+    text-align: center;
+    font-size: 112px;
+    font-weight: 300;
+    color: #262323;
+    margin-bottom: -38px;
+  }
+
+  .wrapper__inner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+  }
+}

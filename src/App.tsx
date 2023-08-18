@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from "react-router-dom";
 import MainPage from "./pages/main/main-page";
 import "./shared/styles/app.scss"
-import { Header } from "./widgets";
+import { Footer, Header } from "./widgets";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

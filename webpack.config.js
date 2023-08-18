@@ -3,9 +3,9 @@ const path = require('path');
 module.exports = {
   module: {
     resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
+      // extensions: ['.tsx', '.ts', '.js'],
       alias: {
-        '@': path.resolve(__dirname, './src'),
+        '@$': path.resolve(__dirname, 'src'),
       },
     },
     use: [

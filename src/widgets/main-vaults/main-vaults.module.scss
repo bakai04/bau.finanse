@@ -1,0 +1,26 @@
+.main_vaults {
+  margin-top: 72px;
+
+  .main_vaults__title {
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 72px;
+    max-width: 962px;
+
+    span {
+      color: var(--green);
+    }
+  }
+  .main_vaults__description {
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .main_vaults__button {
+    margin-top: 24px;
+  }
+}

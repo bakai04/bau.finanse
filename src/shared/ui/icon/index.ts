@@ -5,3 +5,5 @@ export { ReactComponent as Profile} from "./profile.svg";
 export { ReactComponent as ArrowLong} from "./arrow-fall.svg";
 export { ReactComponent as RealisticLogo} from "./logo-3d.svg";
 export { ReactComponent as BG_Light} from "./bg-light.svg";
+export { ReactComponent as Curve} from "./Curve.svg";
+export { ReactComponent as Pattern} from "./pattern.svg";

@@ -1,0 +1,68 @@
+.vaults_filter {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+
+  .vaults_filter__title {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: var(--grey);
+    margin-bottom: 8px;
+  }
+  
+  .vaults_filter__deposit {
+    width: 100%;
+    button {
+      color: var(--green);
+      background-color: var(--background);
+      padding: 22px;
+      border: 1px solid var(--grey);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      max-width: 660px;
+      display: block;
+      width: 100%;
+      border-radius: 16px;
+    }
+   }
+
+  .vaults_filter__years {
+    display: flex;
+    gap: 24px;
+
+    .vaults_filter__year {
+      cursor: pointer;
+      border-radius: 16px;
+      width: 185px;
+      background-color: var(--background);
+      border: 1px solid var(--grey);
+      padding: 22px 40px;
+      color: var(--grey);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+    }
+
+    .active_year {
+      color: var(--foreground);
+      border: 1px solid var(--green);
+    }
+  }
+  .vaults_filter__comission {
+    cursor: pointer;
+    border-radius: 16px;
+    width: 185px;
+    background-color: var(--background);
+    border: 1px solid var(--grey);
+    padding: 22px 40px;
+    color: var(--foreground);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

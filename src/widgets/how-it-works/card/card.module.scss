@@ -1,0 +1,50 @@
+.card{
+  height:362px;
+  width:362px;
+  transform-style:preserve-3d;
+  position: relative;
+  transition: all 1s ease-in-out;
+  backface-visibility: hidden;
+  margin:10px;
+}
+
+.front, .back{
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: var(--dark-grey);
+  height:100%;
+  width:100%;
+  padding: 22px;
+  border-radius:1em;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  transform-style:preserve-3d;
+
+  perspective: 1000px;
+  box-shadow: 2px 4px 8px 1px rgba(black,0.4);
+
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 36px;
+
+  p {
+  }
+}
+
+
+.back{
+  transform: rotateY( 180deg );
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  background: linear-gradient(126.85deg, #353A36 0%, #292A2C 100%);
+}
+
+.front > p , .back > p {
+  max-width: 320px;
+}
+
+.card:hover{
+  transform:rotateY(180deg);
+}

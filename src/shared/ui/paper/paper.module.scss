@@ -1,0 +1,10 @@
+.paper {
+  padding: 38px;
+  border-radius: 16px;
+  background: var(--dark-grey);
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background: var(--space-grey);
+  }
+}

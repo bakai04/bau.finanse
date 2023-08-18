@@ -1,10 +1,12 @@
-import { Layout, MainSlider } from "../../widgets"
+import { HowItWorks, Layout, MainPreview, MainVaults } from "../../widgets"
 import React from 'react'
 
 const MainPage = () => {
   return (
     <Layout>
-      <MainSlider />
+      <MainPreview/>
+      <MainVaults/>
+      <HowItWorks/>
     </Layout>
   )
 }

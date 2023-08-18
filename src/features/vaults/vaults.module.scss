@@ -1,0 +1,11 @@
+.table {
+  width: 100%;
+  margin-top: 24px;
+  overflow-y: auto;
+  
+  .table__body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
