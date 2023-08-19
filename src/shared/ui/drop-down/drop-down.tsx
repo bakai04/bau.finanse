@@ -1,4 +1,4 @@
-import React, { cloneElement, isValidElement, useRef, useEffect } from "react";
+import React, { cloneElement, isValidElement, useRef, useEffect, useState } from "react";
 import { ArrowContainer, Popover, PopoverAlign, PopoverPosition } from "react-tiny-popover";
 import { DropDownDivider } from "./divider";
 import styles from "./drop-down.module.scss";
@@ -15,6 +15,7 @@ export interface IDropDown {
   arrow?: boolean;
   align?: PopoverAlign;
   width?: number;
+  defaultSelected?: number;
 }
 
 interface PopoverItemProps extends React.PropsWithChildren<React.HTMLAttributes<HTMLLIElement>> {
@@ -23,10 +24,11 @@ interface PopoverItemProps extends React.PropsWithChildren<React.HTMLAttributes<
 }
 
 export const DropDown = (props: IDropDown) => {
+  const [selectedIndex, setSelectedIndex] = useState((props?.defaultSelected && props?.defaultSelected >= 0) || -1);
   const container = useRef(null);
   const listRef = useRef(null);
   const position = useAutoPosition(listRef, container, props.positions);
-  const { highlightedIndex, setHighlightedIndex, indexes, onTogglePopover, isOpen } = useArrowControl(props.children);
+  const { highlightedIndex, setHighlightedIndex, indexes, onTogglePopover, isOpen } = useArrowControl(props.children, setSelectedIndex);
 
   return (
     <>
@@ -53,6 +55,8 @@ export const DropDown = (props: IDropDown) => {
                 if (isValidElement(child)) {
                   return cloneElement(child, {
                     active: index === indexes[highlightedIndex],
+                    selected: index === selectedIndex,
+                    handleClick: () => { setSelectedIndex(index); setHighlightedIndex(indexes.indexOf(index)) },
                     onMouseEnter: () => setHighlightedIndex(indexes.indexOf(index)),
                   } as Partial<PopoverItemProps>);
                 }

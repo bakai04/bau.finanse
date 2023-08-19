@@ -35,6 +35,7 @@ export const VaultsFilter = () => {
       <div>
         <label className={style.vaults_filter__title}>Commission</label>
         <DropDown
+          defaultSelected={2}
           positions={["bottom", "left", "top", "right"]}
           triggerButton={
             <button className={style.vaults_filter__comission}>
@@ -45,7 +46,7 @@ export const VaultsFilter = () => {
         >
           {
             comissions.map(elem => (
-              <DropDown.Item active={elem === activeComission} key={elem} onClick={() => setActiveComission(elem)}>{elem}</DropDown.Item>
+              <DropDown.Item selected={elem === activeComission} key={elem} onClick={() => setActiveComission(elem)}>{elem}</DropDown.Item>
             ))
           }
         </DropDown>

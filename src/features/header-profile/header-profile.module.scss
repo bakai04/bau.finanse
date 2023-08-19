@@ -3,4 +3,27 @@
   gap: 12px;
   align-items: center;
   cursor: pointer;
+  position: relative;
+}
+
+.connect_wallet {
+  color: var(--warning);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  padding: 24px 16px;
+}
+
+.profile_active {
+  position: relative;
+}
+
+.profile_marker {
+  position: absolute;
+  top: -4px;
+  left: 0px;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--green);
 }

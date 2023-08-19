@@ -3,7 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { DropDownItem } from "../ui/drop-down/item";
 import { DropDownLink } from "../ui/drop-down/link";
 
-export const useArrowControl = (children: ReactNode) => {
+
+type SetSelectedIndex = (val:number) => void;
+
+export const useArrowControl = (children: ReactNode, setSelectedIndex:SetSelectedIndex) => {
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const items = useMemo(() => React.Children.toArray(children), [children]);
   const highlightedIndexRef = useRef(highlightedIndex);
@@ -37,6 +40,7 @@ export const useArrowControl = (children: ReactNode) => {
     if (highlightedIndexRef.current !== -1 && isValidElement(item)) {
       if (item.type === DropDownLink) navigate(item.props.href);
       if (item.props.onClick) item.props.onClick();
+      setSelectedIndex(highlightedIndexRef.current)
     }
   };
 

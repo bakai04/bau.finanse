@@ -19,8 +19,8 @@ export const Modal = (props: IModal) => {
   useKeyDown(KeyName.ESC, props.onClose);
   useOnClickOutside(ref, () => props.onClose());
   return (
-    <div className={cx(style.modal, props.className)} style={props.style} id={props.htmlId} onClick={props.onClose}>
-      <div ref={ref} className={style.wrapper} style={{ width: props.width }} onClick={(e) => e.stopPropagation()}>
+    <div className={cx(style.modal)} style={props.style} id={props.htmlId} onClick={props.onClose}>
+      <div ref={ref} className={cx(style.wrapper, props.className)} style={{ width: props.width }} onClick={(e) => e.stopPropagation()}>
         <Icon.Cross className={style.close_btn} onClick={props.onClose}/>
         {props.children}
       </div>

@@ -10,7 +10,7 @@ export const Footer = () => {
       <footer className={style.footer}>
         <div className={style.footer__nav}>
           <Link to="/" className={style.nav__item}>Docs</Link>
-          <Link to="/" className={style.nav__item}><Icon.Logo /></Link>
+          <Link to="/"><Icon.Logo /></Link>
           <Link to="/" className={style.nav__item}>Audit</Link>
         </div>
         <a href="mailto:hi@bau.finance" className={style.footer__email}>hi@bau.finance</a>

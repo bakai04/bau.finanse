@@ -1,5 +1,5 @@
 .table__cell {
-  flex: 1 0 222px;
+  flex: 1 1 222px;
 
   display: flex;
   align-items: center;
@@ -16,4 +16,13 @@
 
 .table__row {
   display: flex;
+  width: 100%;
+  padding: 38px;
+  border-radius: 16px;
+  background: var(--dark-grey);
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background: var(--space-grey);
+  }
 }

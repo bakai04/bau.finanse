@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <Layout>
       <header className={style.header}>
-        <Icon.Logo />
+        <Link to={"/"}><Icon.Logo /></Link>
         <div className={style.header__centerBlock}>
           <p className={style.header__top}>Soon</p>
           <ul className={style.header__nav}>

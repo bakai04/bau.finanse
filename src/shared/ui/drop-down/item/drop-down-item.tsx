@@ -7,8 +7,10 @@ interface IDropDownItem {
   prefix?: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
+  selected?: boolean;
   danger?: boolean;
   suffix?: ReactNode;
+  handleClick?: () => void
   style?: CSSProperties;
   className?: string;
   active?: boolean;
@@ -16,14 +18,18 @@ interface IDropDownItem {
 }
 
 export const DropDownItem = (props: IDropDownItem) => {
+  const onClick = () => {
+    if(props.handleClick) props?.handleClick();
+    if(props.onClick) props?.onClick();
+  }
+
   return (
     <li
       style={props.style}
-      onClick={props.onClick}
-      onMouseEnter={props.onMouseEnter}
+      onClick={onClick}
       aria-hidden={props.disabled}
       tabIndex={-1}
-      className={cx(style.drop_down_item, props.className, props.danger && style.danger, props.active && style.active)}
+      className={cx(style.drop_down_item, props.className, props.danger && style.danger, props.active && style.active, props.selected && style.selected)}
     >
       <div className={style.prefix}>
         {props.prefix}

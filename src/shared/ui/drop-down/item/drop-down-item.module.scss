@@ -21,6 +21,14 @@
     outline: 0px;
   }
 
+  &:first-child {
+    border-radius: 16px 16px 0px 0px ;
+  }
+
+  &:last-child {
+    border-radius: 0px 0px 16px 16px;
+  }
+
   &:hover {
     background: #31312F;
   }
@@ -40,6 +48,10 @@
 
 .active {
   background: #31312F;
+}
+
+.selected {
+  color: var(--green);
 }
 
 .suffix {

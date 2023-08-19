@@ -15,20 +15,21 @@ export interface ITableData {
 
 interface IVaultsTableProps {
   columns: IColumn[]
-  data: ITableData[] 
+  data: ITableData[]
 }
 
-export const VaultsTable = (props:IVaultsTableProps) => {
+export const VaultsTable = (props: IVaultsTableProps) => {
   return (
-    <table className={style.table}>
-      <VaultsHeader columns={props.columns} />
-      <tbody className={style.table__body}>
-        {
-          props.data.map((elem, index) => (
-            <VaultsRow key={index} data={elem} columns={props.columns}/>
-          ))
-        }
-      </tbody>
-    </table>
+    <div className={style.table_container}>
+      <table className={style.table}>
+        <VaultsHeader columns={props.columns} />
+        <tbody className={style.table__body}>
+          {props.data.map((elem, index) => (
+            <VaultsRow key={index} data={elem} columns={props.columns} />
+          ))}
+        </tbody>
+      </table>
+    </div>
+
   )
 }

@@ -10,7 +10,7 @@ interface IVaultsRow {
 
 export const VaultsRow = (props: IVaultsRow) => {
   return (
-    <Paper>
+    // <Paper>
       <tr className={style.table__row}>
         {
           props.columns.map((elem) => (
@@ -23,6 +23,6 @@ export const VaultsRow = (props: IVaultsRow) => {
         <td className={style.table__cell}><span>$ 0.5</span></td>
         <td className={style.table__cell}>$ 50</td> */}
       </tr>
-    </Paper>
+    // </Paper>
   )
 }
