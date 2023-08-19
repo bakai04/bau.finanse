@@ -1,0 +1,42 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 376px;
+  overflow-x: auto;
+
+  .token {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    border-radius: 32px;
+    padding: 8px 24px 8px 8px;
+
+    &:hover {
+      background: #31312F;
+    }
+
+    .token__logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .title {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+    }
+  }
+}
+

@@ -5,8 +5,15 @@ import { ExchangeCoinTabs } from "./ui/tabs";
 import { Button, Icon } from "../../shared/ui";
 import { CoinInfo } from "./ui/coin-info";
 import { CoinInfoRoute } from "./ui/route";
+import { Modals } from "../../shared/lib";
+import { TransactionSubmited } from "../../features";
 
 export const ExchangeCoin = () => {
+
+  const onAddModal = () => {
+    Modals.open(TransactionSubmited, {})
+  }
+
   return (
     <div className={style.wrapper}>
       <ExchangeCoinTabs />
@@ -16,7 +23,7 @@ export const ExchangeCoin = () => {
         <CoinInfo isChangable={false} />
       </div>
       <CoinInfoRoute/>
-      <Button size="medium" className={style.button}>Approve</Button>
+      <Button size="medium" onClick={onAddModal} className={style.button}>Approve</Button>
     </div>
   )
 }

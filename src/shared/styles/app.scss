@@ -31,3 +31,20 @@ body {
 :before {
   box-sizing: border-box;
 }
+
+
+
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #42423F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--foreground);
+  border: 2px;
+  border-radius: 5px;
+}

@@ -1,0 +1,49 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  height: -webkit-fill-available;
+  width: 100vw;
+  overflow: auto;
+  z-index: 1001;
+  background: #211E1E52;
+}
+
+.wrapper {
+  background-color: var(--background);
+  border-radius: 24px;
+  color: var(--foreground);
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 32px;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+
+  animation: init 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .close_btn {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    cursor: pointer;
+  }
+
+  @keyframes init {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -40px, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+}
