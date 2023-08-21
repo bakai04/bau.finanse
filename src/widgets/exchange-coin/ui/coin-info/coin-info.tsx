@@ -44,7 +44,7 @@ export const CoinInfo = (props: ICoinInfoProps) => {
             DYDX-ETH
             {props.isChangable && <Icon.Arrow />}
           </p>
-          <input value={value} className={style.count} onChange={handleChange}/>
+          <input value={value} type={"number"} className={style.count} onChange={handleChange}/>
         </div>
         <div className={style.footer}>
           <span>Curve</span>
