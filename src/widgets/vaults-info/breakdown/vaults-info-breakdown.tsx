@@ -4,7 +4,7 @@ import style from "./vaults-info-breakdown.module.scss"
 export const VaultsInfoBreakdown = () => {
   return (
     <div className={style.info__block}>
-      <h4 className={style.info__title}>Your position</h4>
+      <h4 className={style.info__title}>LP Breakdown</h4>
       <ul className={style.info__list}>
         <li className={style.info__earned}>
           <span className={style.info__description}>Curve COILFRAX-f</span>

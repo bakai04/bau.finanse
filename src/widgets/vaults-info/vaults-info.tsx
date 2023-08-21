@@ -1,10 +1,11 @@
 import { Paper } from "../../shared/ui";
 import React from 'react'
 import style from "./vaults-info.module.scss";
-import strategy from "../../shared/images/strategy.png"
+import strategy from "../../shared/images/strategy.svg";
 import { VaultsInfoPosition } from "./position";
 import { VaultsInfoBreakdown } from "./breakdown";
 import { ExchangeCoin } from "../exchange-coin";
+import { Link } from "react-router-dom";
 
 export const VaultsInfo = () => {
   return (
@@ -29,8 +30,8 @@ export const VaultsInfo = () => {
           <div className={style.info__head}>
             <h4 className={style.info__title}>Strategy</h4>
             <div className={style.info__nav}>
-              <p className={style.nav__item}>Strategy</p>
-              <p className={style.nav__item}>Volts</p>
+              <Link to={"/"} className={style.nav__item}>Strategy</Link>
+              <Link to={"/"} className={style.nav__item}>Vaults</Link>
             </div>
           </div>
           <img src={strategy} alt="strategy" />

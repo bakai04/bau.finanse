@@ -27,6 +27,30 @@ const tokens = [
     icon: <Icon.Curve />,
     name: "ETH",
   },
+  {
+    icon: <Icon.Curve />,
+    name: "ETH",
+  },
+  {
+    icon: <Icon.Curve />,
+    name: "ETH",
+  },
+  {
+    icon: <Icon.Curve />,
+    name: "ETH",
+  },
+  {
+    icon: <Icon.Curve />,
+    name: "ETH",
+  },
+  {
+    icon: <Icon.Curve />,
+    name: "ETH",
+  },
+  {
+    icon: <Icon.Curve />,
+    name: "ETH",
+  },
 ]
 
 export const TokenList = () => {

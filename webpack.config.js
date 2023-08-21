@@ -8,6 +8,17 @@ module.exports = {
         '@$': path.resolve(__dirname, 'src'),
       },
     },
+    module: {
+      rules: [
+        {
+          test: /\.jsx?$/, // Поддержка файлов с расширением '.js' и '.jsx'
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader', // Используйте Babel для транспиляции кода
+          },
+        },
+      ],
+    },
     use: [
       {
         loader: "@svgr/webpack",

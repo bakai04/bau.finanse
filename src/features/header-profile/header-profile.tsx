@@ -5,7 +5,7 @@ import { Modals } from "../../shared/lib";
 import { ConnectWallet } from "../connect-wallet";
 
 const HeaderProfile = () => {
-  const isAuth = false;
+  const isAuth = true;
  
   const onAddModal = () => {
     Modals.open(ConnectWallet, {})

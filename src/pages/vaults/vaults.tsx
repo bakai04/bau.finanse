@@ -3,7 +3,7 @@ import React from 'react'
 import style from "./vaults.module.scss";
 import { VaultSearch } from "../../features";
 import { Icon } from "../../shared/ui";
-import { VaultsTable } from "../../features/vaults-table/vaults-table";
+import { VaultsTable } from "../../features/vaults-table";
 
 const columns = [
   {
