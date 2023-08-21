@@ -34,7 +34,7 @@ export const VaultsInfo = () => {
               <Link to={"/"} className={style.nav__item}>Vaults</Link>
             </div>
           </div>
-          <img src={strategy} alt="strategy" />
+          <img className={style.strategy__img} src={strategy} alt="strategy" />
         </div>
       </div>
       <ExchangeCoin/>

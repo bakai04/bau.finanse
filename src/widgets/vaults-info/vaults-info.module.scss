@@ -1,5 +1,6 @@
 .detail {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
 
@@ -7,9 +8,9 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 870px;
+    flex: 1;
     width: 100%;
-
+  
     .info__block {
       position: relative;
       background: var(--dark-grey);
@@ -75,5 +76,9 @@
         background-repeat: no-repeat;
       }
     }
+  }
+  .strategy__img {
+    display: block;
+    margin: 0 auto;
   }
 }

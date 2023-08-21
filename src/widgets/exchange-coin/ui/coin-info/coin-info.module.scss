@@ -39,9 +39,10 @@
     }
 
     .count {
+      width: 236px;
+      -webkit-appearance: none;
       text-align: end;
       background: var(--background);
-      width: fit-content;
       border: 0;
       font-size: 20px;
       font-weight: 400;
@@ -74,4 +75,19 @@
     line-height: 20px;
     color: var(--grey);
   }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Для браузеров на базе Mozilla (Firefox) */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]::-moz-inner-spin-button,
+input[type="number"]::-moz-outer-spin-button {
+    -moz-appearance: none;
 }
