@@ -27,18 +27,24 @@
     
     .info__earned {
       display: flex;
-      justify-content: space-between;
       font-size: 16px;
       font-weight: 300;
       line-height: 24px;
       color: var(--grey);
 
+      .info__description {
+        flex: 1 1 372px;
+      }
+
       .info__coin {
         color: var(--foreground);
+        flex: 1 1 288px;
       }
 
       .info__percent {
         color: var(--foreground);
+        flex: 1 1 96px;
+        text-align: end;
       }
 
     }

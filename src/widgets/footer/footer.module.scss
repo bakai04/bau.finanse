@@ -15,11 +15,6 @@
       font-weight: 300;
       line-height: 32px;
       color: var(--grey);
-      transition: all ease-in-out 0.1s;
-    
-      &:hover {
-        transform: scale(0.97);
-      }
     }
   }
   
@@ -28,11 +23,12 @@
     font-size: 24px;
     font-weight: 300;
     line-height: 32px;
-    transition: all ease-in-out 0.1s;
-    
+    transition: 0.3s ease-in-out;
+
     &:hover {
-      color: var(--foreground);
+      color: var(--grey);
     }
+    
   }
 
   .footer__medias {
@@ -50,6 +46,7 @@
       transition: 0.3s ease-in-out;
 
       &:hover {
+        
         background-clip: text; 
         color: transparent;
         background-image: url("../../shared/ui/icon/pattern.svg")

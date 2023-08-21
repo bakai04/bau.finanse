@@ -13,4 +13,5 @@ export { ReactComponent as TableHeader} from "./top-bottom.svg";
 export { ReactComponent as ArrowDown} from "./arrow-down.svg";
 export { ReactComponent as Clock} from "./clock.svg";
 export { ReactComponent as Copy} from "./Copy.svg";
+export { ReactComponent as Click} from "./icons8-галочка.svg";
 

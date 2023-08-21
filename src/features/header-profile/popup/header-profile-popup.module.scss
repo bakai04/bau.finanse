@@ -1,7 +1,7 @@
 .wrapper {
   cursor: auto;
   position: absolute;
-  top: 38px;
+  top: 54px;
   right: 0px;
   padding: 32px;
   border-radius: 16px;
@@ -11,6 +11,22 @@
   width: 376px;
   gap: 24px;
   z-index: 100;
+
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: init 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @keyframes init {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -40px, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+
 
   .block {
     display: flex;
@@ -31,6 +47,26 @@
       display: flex;
       align-items: center;
       gap: 8px;
+
+      .copy {
+        cursor: pointer;
+        transition: ease-in-out .3s;
+        height: fit-content;
+
+        animation-name: initclick;
+        animation-duration: .3s;
+
+        width: 24px;
+        height: 24px;
+
+        @keyframes initclick {
+          from {
+            transform: scale(0);
+          } to {
+            transform: scale(1);
+          }
+        }
+      }
     }
   }
 
@@ -60,6 +96,13 @@
     font-weight: 300;
     line-height: 12px;
     color: var(--error);
+
+    cursor: pointer;
+    transition: all ease-in-out 0.1s;;
+    
+      &:hover {
+        transform: scale(0.98);
+      }
   }
 }
 

@@ -18,12 +18,14 @@ const HeaderProfile = () => {
       <Icon.BlueLogo />
       {
         isAuth ?
-          <div className={style.header_profile}>
+          <div className={style.header_profile__inner}>
             <div className={style.profile_marker}></div>
-            <Icon.Profile className={style.profile_active} />
-            <span onClick={()=>setIsOpen(!isOpen)}>ox1gtasdq...123</span>
-            <Icon.Arrow />
-            {isOpen && <HeaderProfilePopup setIsOpen={setIsOpen}/>}
+            <Icon.Profile/>
+            <button className={style.header_profile__popup} onClick={() => setIsOpen(!isOpen)}>
+              <span>ox1gtasdq...123</span>
+              <Icon.Arrow />
+            </button>
+            {isOpen && <HeaderProfilePopup setIsOpen={setIsOpen} />}
           </div>
           :
           <p className={style.connect_wallet} onClick={onAddModal}>Connect wallet</p>

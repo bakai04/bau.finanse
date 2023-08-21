@@ -1,7 +1,20 @@
 .wrapper {
   padding: 0px 32px 12px 32px;
   margin-top: 8px;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: init 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 
+  @keyframes init {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -40px, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
   .popover__trigger {
     padding: 14px 0px;
     display: flex;
