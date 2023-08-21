@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-@media(max-width: 1500px) {
+@media(max-width: 1496px) {
   .container {
     max-width: 1400px;
   } 
@@ -12,15 +12,10 @@
 
 @media(max-width: 1400px) {
   .container {
-    max-width: 1200px;
+    min-width: 1100px;
+    // overflow-x: auto;
   } 
 }
-
-// @media(max-width: 1200px) {
-//   .container {
-//     max-width: 992px;
-//   } 
-// }
 
 // @media(max-width: 992px) {
 //   .container {

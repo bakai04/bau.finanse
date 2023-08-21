@@ -15,10 +15,10 @@
       font-weight: 300;
       line-height: 32px;
       color: var(--grey);
-      transition: all ease-in-out 0.1s;;
+      transition: all ease-in-out 0.1s;
     
       &:hover {
-        transform: scale(0.98);
+        transform: scale(0.97);
       }
     }
   }
@@ -28,10 +28,10 @@
     font-size: 24px;
     font-weight: 300;
     line-height: 32px;
-    transition: all ease-in-out 0.1s;;
+    transition: all ease-in-out 0.1s;
     
     &:hover {
-      transform: scale(0.98);
+      color: var(--foreground);
     }
   }
 

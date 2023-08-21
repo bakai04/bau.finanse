@@ -5,7 +5,9 @@
   justify-content: space-between;
   align-items: center;
   height: 170px;
-
+  width: 100%;
+  position: relative;
+  
   .prev_button {
     background-color: var(--background);
     border: 0px;
@@ -38,9 +40,10 @@
     flex-direction: column;
     gap: 12px;
     justify-content: center;
+
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    transform: translateX(50%);
     text-align: center;
 
     .content__title {
