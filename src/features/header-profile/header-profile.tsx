@@ -6,7 +6,7 @@ import { ConnectWallet } from "../connect-wallet";
 
 const HeaderProfile = () => {
   const isAuth = true;
- 
+
   const onAddModal = () => {
     Modals.open(ConnectWallet, {})
   }
@@ -18,7 +18,7 @@ const HeaderProfile = () => {
         isAuth ?
           <div className={style.header_profile}>
             <div className={style.profile_marker}></div>
-            <Icon.Profile className={style.profile_active}/>
+            <Icon.Profile className={style.profile_active} />
             ox1gtasdq...123
             <Icon.Arrow />
           </div>

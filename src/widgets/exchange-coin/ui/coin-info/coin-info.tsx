@@ -1,5 +1,5 @@
 import { Icon } from "../../../../shared/ui"
-import React, { useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import style from "./coin-info.module.scss"
 import cx from "classnames"
 import { SelectToken } from "../../../../features"
@@ -10,6 +10,11 @@ interface ICoinInfoProps {
 
 export const CoinInfo = (props: ICoinInfoProps) => {
   const [searchIsOpen, setSearchIsOpen] = useState(false);
+  const [value, setValue] = useState("1");
+
+  const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  }
 
   const handleClick = () => {
     if (props.isChangable) {
@@ -39,7 +44,7 @@ export const CoinInfo = (props: ICoinInfoProps) => {
             DYDX-ETH
             {props.isChangable && <Icon.Arrow />}
           </p>
-          <input value={"1"} className={style.count}/>
+          <input value={value} className={style.count} onChange={handleChange}/>
         </div>
         <div className={style.footer}>
           <span>Curve</span>
