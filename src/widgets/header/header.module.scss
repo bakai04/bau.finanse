@@ -7,7 +7,14 @@
   align-items: center;
 
   .header__centerBlock {
-    height: 72px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    margin: 0 auto;
+    height: fit-content;
+    width: fit-content;
   }
 
   .header__top{
@@ -23,10 +30,8 @@
     gap: 8px;
     list-style-type: none;
     position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    align-items: center;
-    margin: 0 auto;
+    top: 50%;
+    transform: translateX(-50%);
  
     .nav__item {
       text-decoration: none;
@@ -38,12 +43,54 @@
       display: flex;
       gap: 10px;
       align-items: center;
+      transition: all ease-in-out 0.1s;
+      border-radius: 12px;
 
-      transition: all ease-in-out 0.1s;;
-    
       &:hover {
-        transform: scale(0.98);
+        background-color: var(--space-grey );
       }
     }
+
+    .nav__item_icon {
+      padding: 10px 10px 10px 24px;
+    }
+
+    .active {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        bottom: 0px;
+        background: var(--green);
+        animation: itemBeforeShow 0.3s both linear;
+      }
+    }
+
+    .header__top {
+      position: relative;
+      width: fit-content;
+
+      &::before {
+        content: "Soon"; 
+        position: absolute;
+        top: -24px;
+        right: 50%;
+        transform: translateX(50%);
+        color: var(--green);
+      }
+    }
+  }
+}
+
+@keyframes itemBeforeShow {
+  0% {
+    width: 0;
+    left: 50%;
+  }
+
+  100% {
+    width: 100%;
+    left: 0;
   }
 }

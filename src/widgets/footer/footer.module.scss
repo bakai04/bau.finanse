@@ -15,6 +15,14 @@
       font-weight: 300;
       line-height: 32px;
       color: var(--grey);
+      padding: 16px;
+
+      transition: all ease-in-out 0.1s;
+      border-radius: 12px;
+  
+      &:hover {
+        background-color: var(--space-grey );
+      }
     }
   }
   
@@ -24,9 +32,12 @@
     font-weight: 300;
     line-height: 32px;
     transition: 0.3s ease-in-out;
+    transition: all ease-in-out 0.1s;
+    border-radius: 12px;
+    padding: 16px;
 
     &:hover {
-      color: var(--grey);
+      background-color: var(--space-grey );
     }
     
   }

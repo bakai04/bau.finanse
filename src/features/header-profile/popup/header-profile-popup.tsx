@@ -11,9 +11,7 @@ interface IProps {
 }
 
 export const HeaderProfilePopup = (props: IProps) => {
-  const ref = useRef(null);
   const [copy, setCopy] = useState(false);
-  useOnClickOutside(ref, () => props.setIsOpen(false));
 
   const handleClick = () => {
     copyText("ox1gt...a123").then(()=>{
@@ -25,7 +23,7 @@ export const HeaderProfilePopup = (props: IProps) => {
   }
 
   return (
-    <div ref={ref} className={style.wrapper}>
+    <div className={style.wrapper}>
       <div className={style.block}>
         <span className={style.block__title}>Profile</span>
         <p className={style.block__content}>

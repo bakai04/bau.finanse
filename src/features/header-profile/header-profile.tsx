@@ -7,7 +7,7 @@ import { HeaderProfilePopup } from "./popup";
 
 const HeaderProfile = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const isAuth = true;
+  const isAuth = false;
 
   const onAddModal = () => {
     Modals.open(ConnectWallet, {})
@@ -19,9 +19,9 @@ const HeaderProfile = () => {
       {
         isAuth ?
           <div className={style.header_profile__inner}>
-            <div className={style.profile_marker}></div>
-            <Icon.Profile/>
             <button className={style.header_profile__popup} onClick={() => setIsOpen(!isOpen)}>
+              <div className={style.profile_marker}></div>
+              <Icon.Profile />
               <span>ox1gtasdq...123</span>
               <Icon.Arrow />
             </button>

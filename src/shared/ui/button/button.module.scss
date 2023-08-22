@@ -17,12 +17,17 @@
   transition: 0.2s ease-in-out;
 
   &:hover {
-    background: #729906;
+    background: var(--green-hover);
   }
 
   &:disabled {
     color: var(--grey);
-    border: 1px solid var(--grey);
+    background-color: var(--space-grey);
+    border: 1px solid var(--space-grey);
+  }
+
+  &:focus {
+    background: var(--green-pressed);
   }
 }
 
