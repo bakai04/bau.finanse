@@ -1,0 +1,16 @@
+.background {
+  background-color: #31312F;
+  height: 42px;
+  padding: 5px;
+  border-radius: 42px;
+}
+
+.empty {
+  background-color: #737373;
+}
+
+.content {
+  border-radius: 32px;
+  height: 32px;
+  background-color: var(--green);
+}

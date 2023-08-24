@@ -39,6 +39,17 @@
   &:hover {
     background: var(--space-grey);
   }
+
+  &:focus {
+    background: var(--background);
+    border: 1px solid var(--green-pressed);
+  }
+
+  &:disabled {
+    color: var(--grey);
+    background-color: var(--background);
+    border: 1px solid var(--space-grey);
+  }
 }
 
 .ghost {
