@@ -7,7 +7,7 @@ import { HeaderProfilePopup } from "./popup";
 
 const HeaderProfile = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const isAuth = false;
+  const isAuth = true;
 
   const onAddModal = () => {
     Modals.open(ConnectWallet, {})

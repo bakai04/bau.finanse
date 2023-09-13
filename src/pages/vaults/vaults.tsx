@@ -4,10 +4,12 @@ import style from "./vaults.module.scss";
 import { VaultSearch } from "../../features";
 import { Icon } from "../../shared/ui";
 import { VaultsTable } from "../../features/vaults-table";
+import { ScrollTop } from "../../features/scroll-top";
+import { VaultsName } from "./ui/vaults-name";
 
 const columns = [
   {
-    header: "Name",
+    header: <p className={style.table_head__title}>Name</p>,
     suffix: <Icon.TableHeader/>,
     accessor: "name"
   },
@@ -35,42 +37,42 @@ const columns = [
 
 const data = [
   {
-    name: <><Icon.Curve/>"DYDX-ETH"</>,
+    name: <VaultsName/>,
     apy: "6.53%",
     apyPerWeek: "6.53%",
     deposited: "100 LP Tokens",
     tvl: "$ 420, 441"
   },
   {
-    name: <><Icon.Curve/>"DYDX-ETH"</>,
+    name: <VaultsName/>,
     apy: "6.53%",
     apyPerWeek: "6.53%",
     deposited: "100 LP Tokens",
     tvl: "$ 420, 441"
   },
   {
-    name: <><Icon.Curve/>"DYDX-ETH"</>,
+    name: <VaultsName/>,
     apy: "6.53%",
     apyPerWeek: "6.53%",
     deposited: "100 LP Tokens",
     tvl: "$ 420, 441"
   },
   {
-    name: <><Icon.Curve/>"DYDX-ETH"</>,
+    name: <VaultsName/>,
     apy: "6.53%",
     apyPerWeek: "6.53%",
     deposited: "100 LP Tokens",
     tvl: "$ 420, 441"
   },
   {
-    name: <><Icon.Curve/>"DYDX-ETH"</>,
+    name: <VaultsName/>,
     apy: "6.53%",
     apyPerWeek: "6.53%",
     deposited: "100 LP Tokens",
     tvl: "$ 420, 441"
   },
   {
-    name: <><Icon.Curve/>"DYDX-ETH"</>,
+    name: <VaultsName/>,
     apy: "6.53%",
     apyPerWeek: "6.53%",
     deposited: "100 LP Tokens",
@@ -84,8 +86,9 @@ export const VaultsPage = () => {
       <section className={style.vaults}>
         <h2 className={style.vaults__title}>Vaults</h2>
         <VaultSearch/>
-        <VaultsTable columns={columns} data={data}/>
+        <VaultsTable className={style.vaults__table} columns={columns} data={data}/>
       </section>
+      <ScrollTop/>
     </Layout>
   )
 }

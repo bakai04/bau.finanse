@@ -2,6 +2,7 @@ import React from 'react';
 import { VaultsHeader } from "./header";
 import style from "./vaults-table.module.scss";
 import { VaultsRow } from "./row";
+import cx from "classnames"
 
 export interface IColumn {
   header: React.ReactNode,
@@ -16,11 +17,12 @@ export interface ITableData {
 interface IVaultsTableProps {
   columns: IColumn[]
   data: ITableData[]
+  className?: string;
 }
 
 export const VaultsTable = (props: IVaultsTableProps) => {
   return (
-    <div className={style.table_container}>
+    <div className={cx(style.table_container, props.className)}>
       <table className={style.table}>
         <VaultsHeader columns={props.columns} />
         <tbody className={style.table__body}>

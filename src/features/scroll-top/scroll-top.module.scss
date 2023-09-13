@@ -1,0 +1,17 @@
+.scroll_top__button {
+  padding: 14px;
+  background: linear-gradient(126.85deg, #353A36 0%, #292A2C 100%), linear-gradient(0deg, #272726, #272726);
+  border: 1px solid;
+  border-image-source: linear-gradient(126.85deg, #353A36 0%, #292A2C 100%);
+  box-shadow: 0px 8px 14px 0px #00000029;
+  border-radius: 50%;
+  cursor: pointer;
+  max-height: 54px;
+
+  .arrow {
+    path {
+      stroke: var(--green)
+    }
+    transform: rotate(-180deg);
+  }
+}

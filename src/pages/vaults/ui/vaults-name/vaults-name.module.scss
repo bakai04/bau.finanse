@@ -1,0 +1,21 @@
+.vaults_name {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .tooltip_triger {
+    cursor: pointer;
+  }
+
+  .tooltip__content {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: var(--foreground);
+
+    a {
+      color: var(--green);
+      cursor: pointer;
+    }
+  }
+}

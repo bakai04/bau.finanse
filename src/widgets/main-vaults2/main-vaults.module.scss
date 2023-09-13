@@ -1,0 +1,39 @@
+.main_vaults {
+  margin-top: 72px;
+
+
+  .main_vaults__header {
+    text-align: justify;
+    max-width: 944px;
+    margin-bottom: 24px;
+  }
+
+  .main_vaults__title {
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 72px;
+    max-width: 962px;
+    text-align: left;
+
+    span {
+      color: var(--green);
+    }
+  }
+
+  .main_vaults__description {
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: right;
+    max-height: 72px;
+    max-width: 202px;
+    margin-right: 38px;
+    float: left;
+    margin-top: 18px;
+  }
+
+  .main_vaults__button {
+    margin-top: 24px;
+  }
+}

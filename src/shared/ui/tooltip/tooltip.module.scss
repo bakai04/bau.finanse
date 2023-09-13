@@ -1,0 +1,10 @@
+.wrapper {
+  padding: 24px 16px !important;
+  background: linear-gradient(0deg, #272726, #272726), linear-gradient(0deg, #737373, #737373);
+  border: 1px solid #737373;
+  border-radius: 8px !important;
+  pointer-events: initial !important;
+  .arrow {
+    display: none;
+  }
+}
