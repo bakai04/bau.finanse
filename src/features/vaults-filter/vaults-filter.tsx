@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import style from "./vaults-filter.module.scss"
 import cx from "classnames";
 import { DropDown, Icon } from "../../shared/ui";
@@ -6,14 +6,19 @@ import { DropDown, Icon } from "../../shared/ui";
 export const VaultsFilter = () => {
   const [activeYear, setActiveYear] = useState("1 year");
   const [activeComission, setActiveComission] = useState("5%");
+  const [value, setValue] = useState("1000$");
   const years = ["1 year", "5 years", "10 years"]
   const comissions = ["5%", "10%", "20%", "30%", "40%"]
+
+  const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  }
 
   return (
     <div className={style.vaults_filter}>
       <div className={style.vaults_filter__deposit}>
         <label className={style.vaults_filter__title}>Your deposit</label>
-        <button>$ 1.000</button>
+        <input value={value} onChange={handleChange} className={style.vaults__deposit}/>
       </div>
       <div>
         <label className={style.vaults_filter__title}>Years</label>

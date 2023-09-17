@@ -14,10 +14,12 @@
   
   .vaults_filter__deposit {
     width: 100%;
-    button {
+
+    .vaults__deposit {
       color: var(--green);
       background-color: var(--background);
       padding: 22px;
+      text-align: center;
       border: 1px solid var(--grey);
       font-size: 16px;
       font-weight: 300;

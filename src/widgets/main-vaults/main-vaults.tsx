@@ -1,5 +1,4 @@
-import { VaultsTable, VaultsFilter } from "../../features"
-import React from 'react'
+import { VaultsFilter, VaultsTable } from "../../features"
 import style from "./main-vaults.module.scss"
 import { Button, Icon } from "../../shared/ui"
 import { useNavigate } from "react-router-dom"
@@ -86,7 +85,7 @@ export const MainVaults = () => {
       </h2>
       <p className={style.main_vaults__description}>See how fees can impact ROI for yield farmers</p>
       <div>
-        <VaultsFilter/>
+        <VaultsFilter />
         <VaultsTable columns={columns} data={data}/>
         <Button onClick={onClickMore} className={style.main_vaults__button} size="large" suffix={<Icon.ArrowLong/>}>More vaults</Button>
       </div>
